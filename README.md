@@ -45,8 +45,6 @@ The repository contains the Py2Puml Testing Suite, which includes a comprehensiv
 Additionally, there are various files within the `/tests` directory that provide test utilities and configurations. These files include `conftest.py`, `test__init__.py`, `test__main__.py`, `test_cli.py`, `test_example.py`, `test_modules.py`, `test_py2puml.py`, and `test_utils.py`.
 
 Overall, the Py2Puml Testing Suite employs a range of testing frameworks, libraries, and test cases to thoroughly assess the functionality of Py2Puml and ensure accurate UML diagram generation from Python code.
-![image](https://github.com/supratik21/csit-926-py2puml-testing/assets/112926552/0c676f79-34f1-4f70-a080-e1da570c5df3)
-
 
 # Install
 
