@@ -214,6 +214,20 @@ The generated output will be displayed in the form of an HTML report, which can 
 
 ![py2puml domain UML Diagram](https://github.com/supratik21/csit-926-py2puml-testing/blob/main/Images/CoverageReport_After.PNG)
 
+### Example of Functional Test:
+
+The "tests/py2puml" directory contains a collection of functional test cases for the Py2puml library. These test cases are organized into various subdirectories, such as "basicclass," "checkconstructor," "checkdecorator," and more. Each subdirectory represents a specific aspect or feature of the Py2puml library that is being tested.
+
+To run a specific test case, such as "basicclass," you can use the following command:
+
+```
+py2puml basicclass basicclass
+```
+
+Executing this command will initiate the test case and allow for the evaluation of the Py2puml library's functionality and correctness within the context of that specific test case.
+
+The presence of these comprehensive test cases ensures the robustness and reliability of the Py2puml library, helping to identify and address any potential issues or bugs during the development process.
+
 # Contributions
 
 * [Luc Sorel-Giffo](https://github.com/lucsorel)
