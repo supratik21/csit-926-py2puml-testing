@@ -140,8 +140,8 @@ pip install pygal
 
 Upon successful installation of all the required dependencies, the execution of all test cases can be accomplished by invoking the `pytest` command.
 
-```sh
-\py2puml>pytest
+```
+pytest
 ```
 
 This outputs the following test case content:
@@ -231,7 +231,6 @@ To execute the corresponding functional test case for this module, you can utili
 ```
 pytest tests/py2puml/test_py2puml.py::test_py2puml_basic_class
 ```
-[tests/py2puml](https://github.com/supratik21/csit-926-py2puml-testing/tree/main/tests/py2puml/basicclass)
 
 The same can be repeated for other functional test cases present in the above mentioned directory.
 
