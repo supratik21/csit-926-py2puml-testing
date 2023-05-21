@@ -211,7 +211,7 @@ coverage html
 ```
 
 The generated output will be displayed in the form of an HTML report, which can be accessed through the 'index.html' file located in the 'htmlcov' folder
-![py2puml domain UML Diagram](https://github.com/supratik21/csit-926-py2puml-testing/blob/main/Images/test_image1.PNG)
+![py2puml domain UML Diagram]([https://github.com/supratik21/csit-926-py2puml-testing/blob/main/Images/test_image1.PNG](https://github.com/supratik21/csit-926-py2puml-testing/blob/main/Images/CoverageReport_After.PNG))
 
 ## Python API
 
