@@ -9,36 +9,44 @@
   <h1>Python to PlantUML</h1>
 </div>
 
-Generate PlantUML class diagrams to document your Python application.
+This Testing Suite is a project designed to thoroughly test the functionality and reliability of the Py2Puml tool, which generates UML diagrams from Python code.
+
 
 # How it works
 
-`py2puml` produces a class diagram [PlantUML script](https://plantuml.com/en/class-diagram) representing classes properties (static and instance attributes) and their relations (composition and inheritance relationships).
-
-`py2puml` internally uses code [inspection](https://docs.python.org/3/library/inspect.html) (also called *reflexion* in other programming languages) and [abstract tree parsing](https://docs.python.org/3/library/ast.html) to retrieve relevant information.
-Some parsing features are available only since Python 3.8 (like [ast.get_source_segment](https://docs.python.org/3/library/ast.html#ast.get_source_segment)).
+This Testing Suite is implemented using popular testing frameworks and libraries in the Python ecosystem, such as:
+•	Unittest 
+•	Pytest 
+•	Hypothesis 
+•	Pytest-benchmark 
+•	Pynguin 
+•	Robot Framework
+It leverages assertions, test fixtures, and libraries offered by the above toolset to define and run test cases, enabling automated and systematic testing of Py2Puml's functionality.
 
 ## Features
 
-From a given path corresponding to a folder containing Python code, `py2puml` processes each Python module and generates a [PlantUML script](https://plantuml.com/en/class-diagram) from the definitions of various data structures using:
+The repository contains the Py2Puml Testing Suite, which includes a comprehensive set of test cases to ensure the accuracy, reliability, and functionality of the Py2Puml tool. The repository's `/tests` directory contains various subdirectories, each focusing on specific features and aspects of Py2Puml. Here's a summary of the main directories and files:
 
-* **[inspection](https://docs.python.org/3/library/inspect.html)** and [type annotations](https://docs.python.org/3/library/typing.html) to detect:
-  * static class attributes and [dataclass](https://docs.python.org/3/library/dataclasses.html) fields
-  * fields of [namedtuples](https://docs.python.org/3/library/collections.html#collections.namedtuple)
-  * members of [enumerations](https://docs.python.org/3/library/enum.html)
-  * composition and inheritance relationships (between your domain classes only, for documentation sake).
-The detection of composition relationships relies on type annotations only, assigned values or expressions are never evaluated to prevent unwanted side-effects
+- **`/tests/py2puml`**: This directory serves as the main directory for Py2Puml tests. It contains multiple subdirectories, each representing a specific feature or behavior being tested in Py2Puml. Some of the directories within `/tests/py2puml` include:
 
-* parsing **[abstract syntax trees](https://docs.python.org/3/library/ast.html#ast.NodeVisitor)** to detect the instance attributes defined in `__init__` constructors
+  - `basicclass`: Tests the generation of UML class diagrams for simple Python classes.
+  - `checkconstructor`: Ensures that Py2Puml correctly handles class constructors and represents them in UML diagrams.
+  - `checkdecorator`: Verifies the correct handling of decorators applied to classes and their impact on UML diagrams.
+  - `checkdocstring`: Tests the extraction and representation of docstrings within Python classes in the generated UML diagrams.
+  - `checkinheritance`: Validates the accurate representation of inheritance relationships between classes.
+  - ... (and other directories representing different features)
 
-`py2puml` outputs diagrams in PlantUML syntax, which can be:
-* versioned along your code with a unit-test ensuring its consistency (see the [test_py2puml.py's test_py2puml_model_on_py2uml_domain](tests/py2puml/test_py2puml.py) example)
-* generated and hosted along other code documentation (better option: generated documentation should not be versioned with the codebase)
+- **`/tests/asserts`**: Contains test cases to verify the correctness and accuracy of assertions used within the Py2Puml Testing Suite.
 
-To generate image files, use the PlantUML runtime, a docker image of the runtime (see [think/plantuml](https://hub.docker.com/r/think/plantuml)) or of a server (see the CLI documentation below)
+- **`/tests/modules`**: Includes test cases to assess the handling and behavior of Python modules within Py2Puml, specifically focusing on how dependencies between modules are extracted and represented in the generated UML diagrams.
 
-If you like tools related with PlantUML, you may also be interested in this [lucsorel/plantuml-file-loader](https://github.com/lucsorel/plantuml-file-loader) project:
-a webpack loader which converts PlantUML files into images during the webpack processing (useful to [include PlantUML diagrams in your slides](https://github.com/lucsorel/markdown-image-loader/blob/master/README.md#web-based-slideshows) with RevealJS or RemarkJS).
+- **`/tests/puml_files`**: Contains test cases to ensure the correctness and completeness of the PlantUML files generated by Py2Puml, which represent the Python code and its relationships in UML diagrams.
+
+Additionally, there are various files within the `/tests` directory that provide test utilities and configurations. These files include `conftest.py`, `test__init__.py`, `test__main__.py`, `test_cli.py`, `test_example.py`, `test_modules.py`, `test_py2puml.py`, and `test_utils.py`.
+
+Overall, the Py2Puml Testing Suite employs a range of testing frameworks, libraries, and test cases to thoroughly assess the functionality of Py2Puml and ensure accurate UML diagram generation from Python code.
+![image](https://github.com/supratik21/csit-926-py2puml-testing/assets/112926552/0c676f79-34f1-4f70-a080-e1da570c5df3)
+
 
 # Install
 
