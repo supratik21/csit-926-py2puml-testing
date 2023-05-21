@@ -146,7 +146,7 @@ pytest
 
 This outputs the following test case content:
 
-```plantuml
+```
 ================================================================== test session starts ==================================================================
 platform win32 -- Python 3.11.1, pytest-7.3.0, pluggy-1.0.0
 benchmark: 4.0.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
@@ -240,7 +240,7 @@ The same can be repeated for other functional test cases present in the above me
 * [Sumit Suman](https://github.com/sumitsuman204)
 
 
-Feel free to pitch in ideas of evolving our test suite via pull-requests.
+We welcome pull requests to evolve our test suite. Your ideas and suggestions are valuable for improving our testing process. Feel free to contribute new test cases, enhance test coverage, or propose improvements. Our team will review and collaborate with you to incorporate beneficial changes.
 
 
 # Current limitations
