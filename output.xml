@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.3 on darwin)" generated="20230513 13:51:24.874" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Robot Withabstract" source="/Users/supratiksarkar/Desktop/Prod/py2puml/tests/modules/test_robot_withabstract.robot">
+<test id="s1-t1" name="Test ClassTemplate and ConcreteClass" line="13">
+<kw name="Initiate Class">
+<arg>ClassTemplate</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${class_obj}</var>
+<arg>'${class_name}'=='ConcreteClass'</arg>
+<arg>Create Instance</arg>
+<arg>${class_name}</arg>
+<arg>ELSE</arg>
+<arg>Create Instance</arg>
+<arg>ClassTemplate</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Create Instance">
+<arg>ClassTemplate</arg>
+<msg timestamp="20230513 13:51:24.923" level="FAIL">No keyword with name 'Create Instance' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.923" endtime="20230513 13:51:24.923"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.920" endtime="20230513 13:51:24.923"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.920" endtime="20230513 13:51:24.923"/>
+</kw>
+<kw name="Run Keyword And Expect Error" library="BuiltIn">
+<var>${rc}</var>
+<arg>TypeError</arg>
+<arg>Must be implemented by subclass</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="NOT RUN" starttime="20230513 13:51:24.923" endtime="20230513 13:51:24.923"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${rc} is not None</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" starttime="20230513 13:51:24.924" endtime="20230513 13:51:24.924"/>
+</kw>
+<kw name="Create Class">
+<arg>ConcreteClass</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.926" endtime="20230513 13:51:24.926"/>
+</kw>
+<kw name="Initiate Class">
+<var>${obj}</var>
+<arg>ConcreteClass</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.926" endtime="20230513 13:51:24.926"/>
+</kw>
+<kw name="Object Should Be An Instance Of Class">
+<arg>${obj}</arg>
+<arg>ConcreteClass</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.930" endtime="20230513 13:51:24.930"/>
+</kw>
+<kw name="Object Should Be An Instance Of Class">
+<arg>${obj}</arg>
+<arg>ClassTemplate</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.932" endtime="20230513 13:51:24.932"/>
+</kw>
+<kw name="Object Should Not Be An Instance Of Class">
+<arg>${obj}</arg>
+<arg>ABC</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.934" endtime="20230513 13:51:24.935"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${obj}</arg>
+<arg>must_be_implemented</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20230513 13:51:24.935" endtime="20230513 13:51:24.935"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.919" endtime="20230513 13:51:24.935">No keyword with name 'Create Instance' found.</status>
+</test>
+<test id="s1-t2" name="Test creating object of abstract class ClassTemplate should raise TypeError" line="24">
+<kw name="Initiate Class">
+<arg>ClassTemplate</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${class_obj}</var>
+<arg>'${class_name}'=='ConcreteClass'</arg>
+<arg>Create Instance</arg>
+<arg>${class_name}</arg>
+<arg>ELSE</arg>
+<arg>Create Instance</arg>
+<arg>ClassTemplate</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Create Instance">
+<arg>ClassTemplate</arg>
+<msg timestamp="20230513 13:51:24.942" level="FAIL">No keyword with name 'Create Instance' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.942" endtime="20230513 13:51:24.942"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.937" endtime="20230513 13:51:24.942"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.937" endtime="20230513 13:51:24.942"/>
+</kw>
+<kw name="Run Keyword And Expect Error" library="BuiltIn">
+<var>${rc}</var>
+<arg>TypeError</arg>
+<arg>Must be implemented by subclass</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="NOT RUN" starttime="20230513 13:51:24.942" endtime="20230513 13:51:24.942"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${rc} is not None</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" starttime="20230513 13:51:24.942" endtime="20230513 13:51:24.942"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.936" endtime="20230513 13:51:24.943">No keyword with name 'Create Instance' found.</status>
+</test>
+<test id="s1-t3" name="Test creating object of ConcreteClass should not raise any error" line="29">
+<kw name="Create Class">
+<arg>ConcreteClass</arg>
+<msg timestamp="20230513 13:51:24.946" level="FAIL">No keyword with name 'Create Class' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.946" endtime="20230513 13:51:24.946"/>
+</kw>
+<kw name="Initiate Class">
+<var>${obj}</var>
+<arg>ConcreteClass</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.946" endtime="20230513 13:51:24.946"/>
+</kw>
+<kw name="Should Not Raise Exception">
+<arg>Call Method</arg>
+<arg>${obj}</arg>
+<arg>must_be_implemented</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.949" endtime="20230513 13:51:24.949"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.943" endtime="20230513 13:51:24.949">No keyword with name 'Create Class' found.</status>
+</test>
+<test id="s1-t4" name="Test ConcreteClass instance is an instance of ClassTemplate" line="34">
+<kw name="Create Class">
+<arg>ConcreteClass</arg>
+<msg timestamp="20230513 13:51:24.953" level="FAIL">No keyword with name 'Create Class' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.953" endtime="20230513 13:51:24.953"/>
+</kw>
+<kw name="Initiate Class">
+<var>${obj}</var>
+<arg>ConcreteClass</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.953" endtime="20230513 13:51:24.953"/>
+</kw>
+<kw name="Object Should Be An Instance Of Class">
+<arg>${obj}</arg>
+<arg>ClassTemplate</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.956" endtime="20230513 13:51:24.956"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.950" endtime="20230513 13:51:24.956">No keyword with name 'Create Class' found.</status>
+</test>
+<test id="s1-t5" name="Test ConcreteClass instance is not an instance of ABC" line="39">
+<kw name="Create Class">
+<arg>ConcreteClass</arg>
+<msg timestamp="20230513 13:51:24.960" level="FAIL">No keyword with name 'Create Class' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.960" endtime="20230513 13:51:24.960"/>
+</kw>
+<kw name="Initiate Class">
+<var>${obj}</var>
+<arg>ConcreteClass</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.961" endtime="20230513 13:51:24.961"/>
+</kw>
+<kw name="Object Should Not Be An Instance Of Class">
+<arg>${obj}</arg>
+<arg>ABC</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.964" endtime="20230513 13:51:24.964"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.956" endtime="20230513 13:51:24.964">No keyword with name 'Create Class' found.</status>
+</test>
+<test id="s1-t6" name="Test ConcreteClass implementation of must_be_implemented method raises no error" line="44">
+<kw name="Create Class">
+<arg>ConcreteClass</arg>
+<msg timestamp="20230513 13:51:24.968" level="FAIL">No keyword with name 'Create Class' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.967" endtime="20230513 13:51:24.968"/>
+</kw>
+<kw name="Initiate Class">
+<var>${obj}</var>
+<arg>ConcreteClass</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.968" endtime="20230513 13:51:24.968"/>
+</kw>
+<kw name="Should Not Raise Exception">
+<arg>Call Method</arg>
+<arg>${obj}</arg>
+<arg>must_be_implemented</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.971" endtime="20230513 13:51:24.972"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.965" endtime="20230513 13:51:24.972">No keyword with name 'Create Class' found.</status>
+</test>
+<test id="s1-t7" name="Test calling must_be_implemented on ClassTemplate raises TypeError" line="49">
+<kw name="Initiate Class">
+<arg>ClassTemplate</arg>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${class_obj}</var>
+<arg>'${class_name}'=='ConcreteClass'</arg>
+<arg>Create Instance</arg>
+<arg>${class_name}</arg>
+<arg>ELSE</arg>
+<arg>Create Instance</arg>
+<arg>ClassTemplate</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Create Instance">
+<arg>ClassTemplate</arg>
+<msg timestamp="20230513 13:51:24.976" level="FAIL">No keyword with name 'Create Instance' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.976" endtime="20230513 13:51:24.976"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.973" endtime="20230513 13:51:24.976"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.973" endtime="20230513 13:51:24.976"/>
+</kw>
+<kw name="Initiate Class">
+<var>${obj}</var>
+<arg>ClassTemplate</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.976" endtime="20230513 13:51:24.977"/>
+</kw>
+<kw name="Run Keyword And Expect Error" library="BuiltIn">
+<var>${rc}</var>
+<arg>TypeError</arg>
+<arg>Must be implemented by subclass</arg>
+<arg>Call Method</arg>
+<arg>${obj}</arg>
+<arg>must_be_implemented</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="NOT RUN" starttime="20230513 13:51:24.977" endtime="20230513 13:51:24.977"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${rc} is not None</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" starttime="20230513 13:51:24.977" endtime="20230513 13:51:24.977"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.972" endtime="20230513 13:51:24.977">No keyword with name 'Create Instance' found.</status>
+</test>
+<test id="s1-t8" name="Test ConcreteClass implementation of must_be_implemented method can be called" line="55">
+<kw name="Create Class">
+<arg>ConcreteClass</arg>
+<msg timestamp="20230513 13:51:24.981" level="FAIL">No keyword with name 'Create Class' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.981" endtime="20230513 13:51:24.981"/>
+</kw>
+<kw name="Initiate Class">
+<var>${obj}</var>
+<arg>ConcreteClass</arg>
+<status status="NOT RUN" starttime="20230513 13:51:24.982" endtime="20230513 13:51:24.982"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${obj}</arg>
+<arg>must_be_implemented</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" starttime="20230513 13:51:24.982" endtime="20230513 13:51:24.982"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.977" endtime="20230513 13:51:24.983">No keyword with name 'Create Class' found.</status>
+</test>
+<test id="s1-t9" name="Test calling must_be_implemented on MyClass raises no error" line="60">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${MyClass}</var>
+<arg>key=value</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230513 13:51:24.987" level="INFO">${MyClass} = {'key': 'value'}</msg>
+<status status="PASS" starttime="20230513 13:51:24.987" endtime="20230513 13:51:24.987"/>
+</kw>
+<kw name="Should Not Raise Exception">
+<arg>Call Method</arg>
+<arg>${MyClass}</arg>
+<arg>must_be_implemented</arg>
+<msg timestamp="20230513 13:51:24.992" level="FAIL">No keyword with name 'Should Not Raise Exception' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.992" endtime="20230513 13:51:24.993"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.985" endtime="20230513 13:51:24.993">No keyword with name 'Should Not Raise Exception' found.</status>
+</test>
+<test id="s1-t10" name="Test calling must_be_implemented on MyClass with no argument raises TypeError" line="64">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${MyClass}</var>
+<arg>key=value</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230513 13:51:24.999" level="INFO">${MyClass} = {'key': 'value'}</msg>
+<status status="PASS" starttime="20230513 13:51:24.999" endtime="20230513 13:51:24.999"/>
+</kw>
+<kw name="Run Keyword And Expect Error" library="BuiltIn">
+<var>${rc}</var>
+<arg>TypeError</arg>
+<arg>must_be_implemented() takes exactly 1 argument (0 given)</arg>
+<arg>Call Method</arg>
+<arg>${MyClass}</arg>
+<arg>must_be_implemented</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<kw name="must_be_implemented() takes exactly 1 argument (0 given)">
+<arg>Call Method</arg>
+<arg>${MyClass}</arg>
+<arg>must_be_implemented</arg>
+<msg timestamp="20230513 13:51:25.004" level="FAIL">No keyword with name 'must_be_implemented() takes exactly 1 argument (0 given)' found.</msg>
+<status status="FAIL" starttime="20230513 13:51:25.002" endtime="20230513 13:51:25.004"/>
+</kw>
+<msg timestamp="20230513 13:51:25.004" level="FAIL">Expected error 'TypeError' but got 'No keyword with name 'must_be_implemented() takes exactly 1 argument (0 given)' found.'.</msg>
+<status status="FAIL" starttime="20230513 13:51:24.999" endtime="20230513 13:51:25.004"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${rc} is not None</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" starttime="20230513 13:51:25.006" endtime="20230513 13:51:25.006"/>
+</kw>
+<status status="FAIL" starttime="20230513 13:51:24.998" endtime="20230513 13:51:25.007">Expected error 'TypeError' but got 'No keyword with name 'must_be_implemented() takes exactly 1 argument (0 given)' found.'.</status>
+</test>
+<status status="FAIL" starttime="20230513 13:51:24.876" endtime="20230513 13:51:25.008"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="10" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="10" skip="0" id="s1" name="Test Robot Withabstract">Test Robot Withabstract</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
