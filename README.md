@@ -3,7 +3,7 @@
     <img width="350px" alt="Python Testing logo"
       src="https://blog.testproject.io/wp-content/uploads/2020/06/16-10-C.jpg" />
   </a>
-  <h1>Python to PlantUML</h1>
+  <h1>Py2puml Testing Suite</h1>
 </div>
 
 This Testing Suite is a project designed to thoroughly test the functionality and reliability of the Py2Puml tool, which generates UML diagrams from Python code.
