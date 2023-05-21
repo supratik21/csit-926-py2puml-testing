@@ -42,7 +42,63 @@ a webpack loader which converts PlantUML files into images during the webpack pr
 
 # Install
 
-Install from [PyPI](https://pypi.org/project/py2puml/):
+Install Pandas from [PyPI](https://pypi.org/project/pandas/):
+
+* with `pip`:
+
+```sh
+pip install pandas
+```
+
+Install Numpy from [PyPI](https://pypi.org/project/numpy/):
+
+* with `pip`:
+
+```sh
+pip install numpy
+```
+
+Install PyTest from [PyPI](https://pypi.org/project/pytest/):
+
+* with `pip`:
+
+```sh
+pip install pytest
+```
+
+Install UnitTest from [PyPI](https://pypi.org/project/unittest/):
+
+* with `pip`:
+
+```sh
+pip install unittest
+```
+
+Install Pynguin from [PyPI](https://pypi.org/project/pynguin/):
+
+* with `pip`:
+
+```sh
+pip install pynguin
+```
+
+Install Hypothesis from [PyPI](https://pypi.org/project/hypothesis/):
+
+* with `pip`:
+
+```sh
+pip install hypothesis
+```
+
+Install RobotFramework from [PyPI](https://pypi.org/project/robotframework/):
+
+* with `pip`:
+
+```sh
+pip install robotframework
+```
+
+Install Py2puml from [PyPI](https://pypi.org/project/py2puml/):
 
 * with `pip`:
 
@@ -50,18 +106,28 @@ Install from [PyPI](https://pypi.org/project/py2puml/):
 pip install py2puml
 ```
 
-* with [poetry](https://python-poetry.org/docs/):
+Install Coverage from [PyPI](https://coverage.readthedocs.io/en/7.2.5/):
+
+* with `pip`:
 
 ```sh
-poetry add py2puml
+pip install coverage
 ```
 
-* with [pipenv](https://pipenv.readthedocs.io/en/latest/):
+Install Pytest-Benchmark from [PyPI](https://pypi.org/project/pytest-benchmark/):
+
+* with `pip`:
 
 ```sh
-pipenv install py2puml
+pip install pytest-benchmark
 ```
 
+Install Pygal from [PyPI](https://pypi.org/project/pygal/):
+* with `pip`:
+
+```sh
+pip install pygal
+```
 # Usage
 
 ## CLI
