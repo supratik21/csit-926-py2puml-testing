@@ -1,10 +1,7 @@
 <div align="center">
-  <a href="https://www.python.org/psf-landing/" target="_blank">
-    <img width="350px" alt="Python logo"
+  <a href="" target="_blank">
+    <img width="350px" alt="Python Testing logo"
       src="https://blog.testproject.io/wp-content/uploads/2020/06/16-10-C.jpg" />
-  </a>
-  <a href="http://plantuml.com/" target="_blank">
-    <img width="116px" height="112px" alt="PlantUML logo" src="http://s.plantuml.com/logoc.png" style="margin-bottom: 40px" vspace="40px" />
   </a>
   <h1>Python to PlantUML</h1>
 </div>
