@@ -46,6 +46,8 @@ Overall, the Py2Puml Testing Suite employs a range of testing frameworks, librar
 
 # Install
 
+In order to configure the test suite, there are a few dependencies that need to be installed. Below are the dependencies along with the respective installation steps:
+
 Install Pandas from [PyPI](https://pypi.org/project/pandas/):
 
 * with `pip`:
