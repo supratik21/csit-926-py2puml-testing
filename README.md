@@ -211,66 +211,8 @@ coverage html
 ```
 
 The generated output will be displayed in the form of an HTML report, which can be accessed through the 'index.html' file located in the 'htmlcov' folder present in parent directory of the project. A sample of the coverage report looks like - 
+
 ![py2puml domain UML Diagram](https://github.com/supratik21/csit-926-py2puml-testing/blob/main/Images/CoverageReport_After.PNG)
-
-## Python API
-
-For example, to create the diagram of the classes used by `py2puml`:
-
-* import the `py2puml` function in your script (see [py2puml/example.py](py2puml/example.py)):
-
-```python
-from py2puml.py2puml import py2puml
-
-if __name__ == '__main__':
-    # outputs the PlantUML content in the terminal
-    print(''.join(py2puml('py2puml/domain', 'py2puml.domain')))
-
-    # writes the PlantUML content in a file
-    with open('py2puml/domain.puml', 'w') as puml_file:
-        puml_file.writelines(py2puml('py2puml/domain', 'py2puml.domain'))
-```
-
-* running it (`python3 -m py2puml.example`) outputs the previous PlantUML diagram in the terminal and writes it in a file.
-
-
-# Tests
-
-```sh
-# directly with poetry
-poetry run pytest -v
-
-# in a virtual environment
-python3 -m pytest -v
-```
-
-Code coverage (with [missed branch statements](https://pytest-cov.readthedocs.io/en/latest/config.html?highlight=--cov-branch)):
-
-```sh
-poetry run pytest -v --cov=py2puml --cov-branch --cov-report term-missing --cov-fail-under 92
-```
-
-# Changelog
-
-* `0.7.2`: added the current working directory to the import path to make py2puml work in any directory or in native virtual environment (not handled by poetry)
-* `0.7.1`: removed obsolete part of documentation: deeply compound types are now well handled (by version `0.7.0`)
-* `0.7.0`: improved the generated PlantUML documentation (added the namespace structure of the code base, homogenized type  between inspection and parsing), improved relationships management (handle forward references, deduplicate relationships)
-* `0.6.1`: handle class names with digits
-* `0.6.0`: handle abstract classes
-* `0.5.4`: fixed the packaging so that the contribution guide is included in the published package
-* `0.5.3`: handle constructors decorated by wrapping decorators (decorators making uses of `functools.wrap`)
-* `0.5.2`: specify in pyproject.toml that py2puml requires python 3.8+ (`ast.get_source_segment` was introduced in 3.8)
-* `0.5.1`: prevent from parsing inherited constructors
-* `0.5.0`: handle instance attributes in class constructors, add code coverage of unit tests
-* `0.4.0`: add a simple CLI
-* `0.3.1`: inspect sub-folders recursively
-* `0.3.0`: handle classes derived from namedtuples (attribute types are `Any`)
-* `0.2.0`: handle inheritance relationships and enums
-* `0.1.3`: first release, handle all modules of a folder and compositions of domain classes
-
-# Licence
-
-Unless stated otherwise all works are licensed under the [MIT license](http://spdx.org/licenses/MIT.html), a copy of which is included [here](LICENSE).
 
 # Contributions
 
