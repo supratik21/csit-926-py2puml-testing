@@ -142,7 +142,7 @@ Upon successful installation of all the required dependencies, the execution of 
 \py2puml>pytest
 ```
 
-This outputs the following PlantUML content:
+This outputs the following test case content:
 
 ```plantuml
 ================================================================== test session starts ==================================================================
@@ -191,34 +191,27 @@ tests\py2puml\parsing\test_parseclassconstructor.py ......
 
 ```
 
-Using PlantUML, this content is rendered as this diagram:
+To execute a specific test case, it is necessary to explicitly specify the name of the desired test case alongside the 'pytest' command
+```sh
+pytest tests/py2puml/domain/test_umlitem.py    
+```
+The resulting output will appear in the following format:
+![py2puml domain UML Diagram](https://github.com/supratik21/csit-926-py2puml-testing/blob/main/Images/test_image1.PNG)
 
-![py2puml domain UML Diagram](https://www.plantuml.com/plantuml/png/ZPD1Yzim48Nl-XLpNbWRUZHxs2M4rj1DbZGzbIN8zcmgAikkD2wO9F-zigqWEw1L3i6HPgJlFUdfsH3NrDKIslvBQxz9rTHSAAPuZQRb9TuKuCG0PaLU_k5776S1IicDkLcGk9RaRT4wRPA18Ut6vMyXAuqgW-_2q2_N_kwgWh0s1zNL1UeCXA9n_iAcdnTamQEApnHTUvAVjNmXqgBeAAoB-dOnDiH9b1aKJIETYBj8gvai07xb6kTtfiMRDWTUM38loV62feVpYNWUMWOXkVq6tNxyLMuO8g7g8gIn9Nd5uQw2e7zSTZX7HJUqqjUU3L2FWElvJRZti6wDafDeb5i_shWb-QvaXtBVjpuMg-ths_P7li-tcmmUu3J5uEAg-URRUfVlNpQhTGPFPr-EUlD4ws-tr0XWcawNU5ZS2W1nVKJoi_EWEjspSxYmo8jyU7oCF5eMoxNV8_BCM2INJsUxKOp68WdnOWAfl5j56CBkl4cd9H8pzj4qX1g-eaBD2IieUaXJjp1DsJEgolvZ_m40)
-
-For a full overview of the CLI, run:
+For a full coveragre report, run:
 
 ```sh
-py2puml --help
+coverage run --source=py2puml --module pytest --verbose tests
 ```
 
-The CLI can also be launched as a python module:
+For generating the coverage in html format
 
 ```sh
-python -m py2puml py2puml/domain py2puml.domain
+coverage html
 ```
 
-Pipe the result of the CLI with a PlantUML server for instantaneous documentation (rendered by ImageMagick):
-
-```sh
-# runs a local PlantUML server from a docker container:
-docker run -d --rm -p 1234:8080 --name plantumlserver plantuml/plantuml-server:jetty
-
-py2puml py2puml/domain py2puml.domain | curl -X POST --data-binary @- http://localhost:1234/svg/ --output - | display
-
-# stops the container when you don't need it anymore, restarts it later
-docker stop plantumlserver
-docker start plantumlserver
-```
+The generated output will be displayed in the form of an HTML report, which can be accessed through the 'index.html' file located in the 'htmlcov' folder
+![py2puml domain UML Diagram](https://github.com/supratik21/csit-926-py2puml-testing/blob/main/Images/test_image1.PNG)
 
 ## Python API
 
