@@ -44,6 +44,22 @@ Additionally, there are various files within the `/tests` directory that provide
 
 Overall, the Py2Puml Testing Suite employs a range of testing frameworks, libraries, and test cases to thoroughly assess the functionality of Py2Puml and ensure accurate UML diagram generation from Python code.
 
+# Prerequisites
+
+Before running the Py2Puml Testing Suite, please ensure that you have Python version 3 or above installed on your system. 
+
+Python can be downloaded and installed from the official Python website: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+
+Having Python version 3 or above installed is essential to ensure the compatibility and proper functioning of the Py2Puml Testing Suite.
+
+To check your Python version, open a terminal or command prompt and run the following command:
+
+```
+python --version
+```
+
+If the output shows a version lower than 3, please update your Python installation to the latest version available.
+
 # Install
 
 In order to configure the test suite, there are a few dependencies that need to be installed. Below are the dependencies along with the respective installation steps:
